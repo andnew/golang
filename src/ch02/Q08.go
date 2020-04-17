@@ -42,6 +42,17 @@ func (s *stack) pop() int {
 	}
 }
 
+func (s *stack) String() string {
+	scont := ""
+	for i := 0; i < s.k-1; i++ {
+		scont += fmt.Sprintf("[%d:%d]", i, s.ary[i])
+		if i < s.k-2 {
+			scont += ","
+		}
+	}
+	return scont
+}
+
 func t81() {
 	var s stack
 	s.push(1)
@@ -49,4 +60,11 @@ func t81() {
 	fmt.Println(s.k, s.ary)
 	fmt.Println(s.pop())
 	fmt.Println(s.pop())
+
+	var s2 stack
+	s2.push(1)
+	s2.push(2)
+	s2.push(3)
+	s2.push(5)
+	fmt.Println(s2.String())
 }

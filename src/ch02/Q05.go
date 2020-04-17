@@ -7,20 +7,37 @@ import "fmt"
 
 func Q5() {
 	fmt.Println("=========Q05==========")
-	t51()
+	a := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
+	t51(a)
+	avg := t52(a)
+	fmt.Println("切片 ", a, " , avg = ", avg)
 }
 
-func t51() {
-
-	a := []float64{1.0, 2.0, 3.0, 4.0, 5.0}
+func t51(nums []float64) {
 
 	sum := 0.0
-
-	for _, v := range a {
+	for _, v := range nums {
 		sum += v
 	}
 
-	avg := sum / float64(len(a))
+	avg := sum / float64(len(nums))
 
 	fmt.Println(avg)
+}
+
+func t52(nums []float64) (avg float64) {
+	// 官方的答案
+	fmt.Println("官方的答案")
+
+	switch len(nums) {
+	case 0:
+		avg = 0.0
+	default:
+		sum := 0.0
+		for _, v := range nums {
+			sum += v
+		}
+		avg = sum / float64(len(nums))
+	}
+	return
 }
