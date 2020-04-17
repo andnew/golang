@@ -5,6 +5,7 @@ import (
 )
 
 func Q4() {
+	fmt.Println("=========Q04=========")
 	avg := t41([]float64{4.0, 1.0, 2.0, 3.0})
 	fmt.Println(avg)
 }

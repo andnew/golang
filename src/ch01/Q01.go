@@ -3,6 +3,7 @@ package ch01
 import "fmt"
 
 func Q1() {
+	fmt.Println("=========Q01=========")
 	// Q1 For-loop
 	//1. 创建一个基于 for 的简单的循环。使其循环 10 次，并且使用 fmt 包打印出计数器的值
 

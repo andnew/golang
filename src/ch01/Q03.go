@@ -24,6 +24,7 @@ asSASA ddd dsjkdsjs dk
 幸的是你需要知道一些关于转换的内容，参阅 “转换” 第 59 页的内容
 */
 func Q3() {
+	fmt.Println("=========Q03=========")
 	t1()
 	t2()
 	t3()
